@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Foundation I</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*<<<----------------------------------------------------------->>>
+        <-- 1. Get 1 to 255 - Write a function that returns an array with all the numbers from 1 to 255. -->
+        <<<------------------------------------------------------------>>>*/
+        function getArray(x) {
+            arr = [];
+            for (i = 1; i <= x; i++) {
+                arr.push(i);
+            }
+            return arr;
+        }
+        y = getArray(255)
+        console.log(y)
+
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 2. Get even 1000 - Write a function that would get the sum of all the even numbers from 1 to 1000.
+              You may use a modulus operator for this exercise. -->
+
+        function getEvenSum() {
+            var sum = 0;
+            for (i = 1; i <= 1000; i++) {
+                if (i % 2 == 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+        y = getEvenSum();
+        console.log(y);
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 3. Sum odd 5000 - Write a function that returns the sum of all the odd numbers from 1 to 5000.
+             (e.g. 1+3+5+...+4997+4999). -->
+
+        function getOddSum() {
+            var sum = 0;
+            for (i = 1; i <= 5000; i++) {
+                if (i % 2 == 1) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+        y = getOddSum();
+        console.log(y);
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 4. Iterate an array - Write a function that returns the sum of all the values within an array. 
+            (e.g. [1,2,5] returns 8. [-5,2,5,12] returns 14). -->
+
+        function getArrSum(x) {
+            var sum = 0;
+            for (i = 0; i < x.length; i++) {
+                sum += x[i];
+            }
+            return sum;
+        }
+        console.log(getArrSum([-5, 2, 5, 12]));
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 5. Find max - Given an array with multiple values, write a function that returns the maximum
+             number in the array. (e.g. for [-3,3,5,7] max is 7) -->
+        
+        function findMax(arr) {
+            var max = arr[0];
+
+            for (var i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+            }
+            return max;
+        }
+        console.log(findMax([-3, 3, 5, 7]));
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 6. Find average - Given an array with multiple values, write a function that returns the average
+             of the values in the array. (e.g. for [1,3,5,7,20] average is 7.2) -->
+
+        function findAverage(x) {
+            sum = 0;
+            for (i = 0; i < x.length; i++) {
+                sum += x[i];
+            }
+            x = sum / x.length;
+            return x;
+        }
+        console.log(findAverage([1, 3, 5, 7, 20]));
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 7. Array odd - Write a function that would return an array of all the odd numbers between 1 to 50.
+             (ex. [1,3,5, .... , 47,49]). Hint: Use 'push' method. -->
+
+        function returnOddArray(y, x) {
+            z = [];
+            for (i = y; i <= x; i++) {
+                if (i % 2 == 1) {
+                    z.push(i);
+                }
+            }
+            return z;
+        }
+        console.log(returnOddArray(1, 50));
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 8.  Greater than Y - Given value of Y, write a function that takes an array and returns the number 
+            of values that are greater than Y. For example if arr = [1, 3, 5, 7] and Y = 3, your function will return 2.
+             (There are two values in the array greater than 3, which are 5, 7).-->
+
+        function greaterThanArray(x, y) {
+            count = 0;
+            for (let i = 0; i < x.length; i++) {
+                if (x[i] > y) {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        z = greaterThanArray([1, 3, 5, 7], 3);
+        console.log(z);
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 9.  Squares - Given an array with multiple values, write a function that replaces each value in
+             the array with the value squared by itself. (e.g. [1,5,10,-2] will become [1,25,100,4])-->
+
+        function getSquares(x) {
+            for (i = 0; i < x.length; i++) {
+                x[i] = x[i] * x[i];
+            }
+            return x;
+        }
+        console.log(getSquares([1, 5, 10, -2]));
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 10. Negatives - Given an array with multiple values, write a function that replaces any negative
+             numbers within the array with the value of 0. When the program is done the array should contain no 
+             negative values. (e.g. [1,5,10,-2] will become [1,5,10,0]) -->
+
+        function replaceNegatives(x) {
+            for (i = 0; i < x.length; i++) {
+                if (x[i] < 0) {
+                    x[i] = 0;
+                }
+            }
+            return x;
+        }
+        z = replaceNegatives([1, 5, 10, -2]);
+        console.log(z);
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 11. Max/Min/Avg - Given an array with multiple values, write a function that returns a new array 
+            that only contains the maximum, minimum, and average values of the original array. (e.g. [1,5,10,-2] will return [10,-2,3.5]) -->
+
+        function minMaxAvg(arr) {
+            var max = arr[0];
+            var min = arr[0];
+            var sum = arr[0];
+
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+                sum += arr[i];
+            }
+            var avg = sum / arr.length;
+            var arrNew = [max, min, avg];
+            return arrNew;
+        }
+        console.log(minMaxAvg([1, 5, 10, -2]));
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 12. Swap Values - Write a function that will swap the first and last values of any given array. 
+            The default minimum length of the array is 2. (e.g. [1,5,10,-2] will become [-2,5,10,1]). -->
+
+        function swapValue(arr) {
+
+            var temp = arr[0]; // temp = 1
+            arr[0] = arr[arr.length - 1]; // arr[3] is -2 so arr[0] becomes -2
+            arr[arr.length - 1] = temp; // arr[3] = 1
+            return arr;
+        }
+        console.log(swapValue([1, 5, 10, -2]))
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <!-- 13. Number to String - Write a function that takes an array of numbers and replaces any
+             negative values within the array with the string 'Dojo'. For example if array = [-1,-3,2], 
+             your function will return ['Dojo','Dojo',2].-->
+
+        function replaceNegatives(x) {
+            for (i = 0; i < x.length; i++) {
+                if (x[i] < 0) {
+                    x[i] = 'Dojo';
+                }
+            }
+            return x;
+        }
+        z = replaceNegatives([-1, -3, 2]);
+        console.log(z);
+        <<<------------------------------------------------------------>>>*/
+
+
+
+        /*<<<----------------------------------------------------------->>>
+        <<<------------------------------------------------------------>>>*/
+    </script>
+
+</body>
+
+</html>
